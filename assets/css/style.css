@@ -1,0 +1,371 @@
+/* ! genutzte Klassen
+- view-all = Button View all
+- trans-bg = transparenter Hintergrund für 3 + 5 + 7
+- grey = graues Design für 2 + 4 + 6
+- grey-text = graues Design Textfeld oben 2 + 4 + 6
+- latest-work-pics = img von 2
+- our-services = Hintergrundbild und Textfelder 3
+- icons = Anordnung der Icon-Textblöcke
+- blogartikel = Textformatierung Blogartikel 4
+- bildboxen = Anordnung der Blogartikel und der Testimonials 4 + 6
+- quote = Textformatierung von Quote 5
+- testimonials = Textformatierung 6
+- contact = Formatierung Kontaktformular 7
+! */
+
+@font-face {
+  font-family: AlegreyaSans;
+  src: url(../font/AlegreyaSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: AlegreyaSC;
+  src: url(../font/AlegreyaSC-Regular.ttf);
+}
+
+@font-face {
+  font-family: NixieOne;
+  src: url(../font/NixieOne-Regular.ttf);
+}
+
+/* ! 0: Allgemein */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ! 1: Header */
+header {
+  background: url(../img/slimandstylish.png) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  /* margin-bottom: 5vh; */
+}
+
+/* ? Navigationsleiste */
+nav {
+  font-family: AlegreyaSC, "Times New Roman", Times, serif;
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2vw;
+  margin-bottom: 30vh;
+}
+
+/* ? Header Textfeld */
+header section {
+  text-align: center;
+}
+
+header h2 {
+  font-family: NixieOne, Georgia, "Times New Roman", Times, serif;
+  font-size: 2.7rem;
+  text-transform: uppercase;
+}
+
+header p {
+  font-family: AlegreyaSC, "Times New Roman", Times, serif;
+  font-size: 1rem;
+}
+
+/* ! Main Bereich */
+
+/* ! 2 + 4 + 6: Generelles Styling für Latest Works, From the Blog und Testimonials */
+/* ? View-all-Button */
+.view-all {
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  border: 1px solid #3a4f52;
+  color: #3a4f52;
+  padding: 1.2vh;
+  text-align: center;
+  margin-block: auto;
+}
+
+/* ? Textfeld oben */
+.grey {
+  background-color: #dcdfe1;
+  padding: 5vh 0;
+}
+
+.grey-text {
+  margin: 0 15vw;
+}
+
+.grey-text div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grey-text h2 {
+  font-family: AlegreyaSans, Arial, Helvetica, sans-serif;
+  color: #3a4f52;
+  font-size: 4vh;
+  margin-bottom: 2vh;
+}
+
+.grey-text p {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #6a6a6a;
+  margin-bottom: 6vh;
+}
+
+/* ! 2: Bildergalerie von latest work */
+/* ? Textblöcke oben und Button sind oben bereits definiert über .grey, .grey-text und .view-all */
+.latest-works-pics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 8vw 0 8vw;
+  gap: 1vw;
+  margin-bottom: 7vh;
+  padding: 0 6.25rem;
+}
+
+/* ! 3 + 5 + 7: transparenter Hintergrund für Services, Quote und Kontaktformular */
+.trans-bg {
+  background-color: rgba(0, 0, 0, 0.242);
+  padding: 20px;
+}
+
+/* ! 3: Our Services Hintergrundbild */
+/* ? transparenter Hintergrund ist bereits oben über .trans-bg definiert */
+.our-services {
+  background: url(../img/div-services.png) center no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 8vh 15vw;
+}
+
+/* ! 3: Our Services Textblöcke */
+.our-services div {
+  padding: 1vh 2vw;
+}
+
+.our-services h2,
+.our-services h3 {
+  font-family: AlegreyaSans, Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+.our-services h2 {
+  font-size: 2.25rem;
+}
+
+.our-services h3 {
+  font-size: 1.875rem;
+}
+
+.kamera {
+  margin-bottom: 10px;
+}
+
+.our-services p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  margin-bottom: 30px;
+  line-height: 1.5rem;
+}
+
+/* ! 3: Our Services Anordnung der Icon-Textblöcke */
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+/* ! 4 + 6: Styling der Bildblöcke von Blog und Testimonials */
+.bildboxen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* margin: 0 8vw 0 8vw; */
+  gap: 1vw;
+  margin-bottom: 4rem;
+}
+
+.bildboxen div {
+  max-width: 360px;
+  /* padding: 0 2rem 2rem 0; */
+}
+
+.bildboxen img {
+  margin-bottom: 1rem;
+}
+
+/* ! 4: From the Blog - einzelne Blogartikel */
+/* ? oberes Textfeld und Button sind oben bereits definiert über .grey, .grey-text und .view-all */
+/* ? Anordnung der Bildblöcke ist bereits oben mit .bildboxen definiert */
+/* ? Es folgt das Styling für den Text unter den Bildern: */
+.blogartikel h3 {
+  font-family: AlegreyaSans, Arial, Helvetica, sans-serif;
+  color: #3a4f52;
+  font-size: 1.875rem;
+  margin-bottom: 2vh;
+}
+
+.blogartikel p {
+  padding: 0 2rem 0.5rem 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.875rem;
+  color: #6a6a6a;
+}
+
+.blogartikel p:first-of-type {
+  font-style: italic;
+}
+
+/* ? Read-More-Button */
+.blogartikel a {
+  color: #4da7ca;
+  font-family: Helvetica, sans-serif;
+  /* padding: 10px; */
+}
+
+/* ! 5: Free Quote */
+/* ? transparenter Hintergrund ist bereits oben über .trans-bg definiert */
+/* ? Es folgt Styling für Textblock von Quote: */
+.quote {
+  background: url(../img/div-parallax.png) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: white;
+  text-align: center;
+  padding: 15vh 15vw;
+}
+
+.quote article {
+  padding-bottom: 5vh;
+}
+
+.quote p {
+  font-family: AlegreyaSans, Arial, Helvetica, sans-serif;
+  font-size: 2.25rem;
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.quote a {
+  border: 1px solid white;
+  color: white;
+  padding: 1rem;
+}
+
+/* ! 6: Testimonials */
+/* ? oberes Textfeld und grauer Hintergrund sind oben bereits definiert über .grey und .grey-text */
+/* ? Anordnung der Bildblöcke ist bereits oben mit .bildboxen definiert */
+/* ? Es folgt das Styling des Textes in den Bildblöcken */
+.testimonials {
+  text-align: center;
+}
+
+.testimonials p {
+  padding: 0 2rem 0.5rem 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.2rem;
+  color: #6a6a6a;
+}
+
+.testimonials h4,
+.testimonials h5 {
+  font-family: Helvetica, sans-serif;
+  font-size: 0.875rem;
+  color: #6a6a6a;
+}
+
+.testimonials h5 {
+  font-weight: lighter;
+}
+
+/* ! 7: Kontaktformular */
+/* ? transparenter Hintergrund ist bereits oben über .trans-bg definiert */
+/* ? Hintergrundbild und Allgemeines:  */
+.contact {
+  background: url(../img/contact.png) center no-repeat;
+  background-size: cover;
+
+  color: white;
+  text-align: center;
+  padding: 8vh 15vw;
+}
+
+/* ? Überschrift oben */
+.contact h2 {
+  font-family: AlegreyaSans, Arial, Helvetica, sans-serif;
+  font-size: 2.25rem;
+  margin-bottom: 2vh;
+  font-weight: lighter;
+}
+
+/* ? Textfeld oben */
+.contact p {
+  font-family: Helvetica, sans-serif;
+  margin-bottom: 4vh;
+  font-weight: lighter;
+}
+
+/* ? Formular Anordnung */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  margin: 6vh 10vw;
+}
+
+/* ? Input-Felder stylen */
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  background: transparent;
+  border: 0.1px solid #cccccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 1vh;
+}
+
+::placeholder {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 0.875rem;
+}
+
+/* ? Submit Button */
+input[type="submit"] {
+  font-family: Helvetica, sans-serif;
+  font-size: 0.875rem;
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+  padding: 1.2vh;
+  text-align: center;
+  width: 7vw;
+  margin: 0 auto;
+}
+
+/* ! 8: Footer Copyright */
+footer section:last-of-type {
+  background-color: #2b3e51;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.875rem;
+}
+
+footer section:last-of-type p {
+  padding: 6vh 15vw;
+}
